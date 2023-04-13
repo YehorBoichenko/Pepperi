@@ -1,0 +1,199 @@
+/* Base Styles */
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    color: #2a2a2a;
+}
+
+label {
+    padding: 0.5em;
+    margin-right: 1em;
+}
+
+input,
+textarea {
+    padding: 0.5em;
+    margin: 0.25em 0;
+    min-width: 17em;
+    font-family: inherit;
+    border-radius: 0.25em;
+    border: thin solid #2196F3;
+}
+
+textarea {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+button {
+    padding: 0.5em 2em;
+    margin: 0.25em;
+    border: thin solid #2196F3;
+    border-radius: 0.25em;
+    background-color: #2196F3;
+    color: #fff;
+    font-size: inherit;
+    cursor: pointer;
+    height: 2em;
+    min-width: 11em;
+}
+
+button:hover,
+button:focus {
+    background-color: #1565C0;
+}
+
+button:disabled {
+    background-color: transparent;
+    color: gray;
+    border-color: gray;
+    cursor: not-allowed;
+}
+form {
+    margin: 0 auto;
+    max-width: 30em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+h1 {
+    text-align: center;
+}
+/* Background Styles */
+.background {
+    background: linear-gradient(-45deg, #2196F3, #4CAF50, #FF9800, #F44336);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+/* Content Styles */
+.content {
+    margin: 62px auto;
+    width: fit-content;
+    padding: 46px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Form Styles */
+
+.label__input-wrapper,
+.list__btn-wrapper {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.button__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    white-space: nowrap;
+}
+
+/* Blob Styles */
+.blob {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(180deg,
+            rgba(47, 184, 255, 0.42) 31.77%,
+            #5c9df1 100%);
+    mix-blend-mode: color-dodge;
+    -webkit-animation: move 25s infinite alternate;
+    animation: move 25s infinite alternate;
+    transition: 1s cubic-bezier(0.07, 0.8, 0.16, 1);
+}
+.blob:hover {
+    width: 520px;
+    height: 520px;
+    -webkit-filter: blur(30px);
+    filter: blur(30px);
+    box-shadow:
+        inset 0 0 0 5px rgba(255, 255, 255, 0.6),
+        inset 100px 100px 0 0px #fa709a,
+        inset 200px 200px 0 0px #784ba8,
+        inset 300px 300px 0 0px #2b86c5;
+}
+
+/* Media Queries */
+/* Mobile Responsive */
+@media (max-width: 480px) {
+
+    .label__input-wrapper,
+    .list__btn-wrapper {
+        flex-direction: column;
+        gap: 1em;
+    }
+         .blob {
+             width: 200px;
+             height: 200px;
+             transform: translate(30%, 30%);
+         }
+}
+@media (min-width: 768px) {
+    h1 {
+        margin-left: 1em;
+    }
+    
+    .label__input-wrapper,
+    .list__btn-wrapper{
+        margin-bottom: 1.5em;
+        display: flex;
+        gap: 5em;
+    }
+
+    textarea {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+}
+@media (max-width: 768px) {
+    .blob {
+        width: 300px;
+        height: 300px;
+        transform: translate(50%, 50%);
+    }
+}
+
+
+/* Keyframes section */
+
+@-webkit-keyframes move {
+    from {
+        transform: translate(-100px, -50px) rotate(-90deg);
+        border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+    }
+
+    to {
+        transform: translate(500px, 100px) rotate(-10deg);
+        border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+    }
+}
+
+@keyframes move {
+    from {
+        transform: translate(-100px, -50px) rotate(-90deg);
+        border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+    }
+
+    to {
+        transform: translate(500px, 100px) rotate(-10deg);
+        border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+    }
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

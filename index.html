@@ -1,0 +1,56 @@
+<!-- This code is for a web app that manages name/value pairs. -->
+<!DOCTYPE html>
+<html lang="en" class="background">
+  <head>
+    <!-- Meta tags to specify the character set, compatibility mode, and viewport settings. -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link to the CSS file for styling. -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- Title of the web app. -->
+    <title>Name/Value Pair Manager</title>
+  </head>
+  <body class="content">
+    <!-- Form for adding name/value pairs. -->
+    <h1>Test</h1>
+    <form id="add-form">
+      <label for="name-val">Name/Value Pair</label>
+      <div class="label__input-wrapper">
+        <input
+          id="add-form-input"
+          type="text"
+          id="name-val"
+          name="name-val"
+          placeholder="Name=Value"
+          autofocus
+        />
+        <button type="submit" class="button">Add</button>
+      </div>
+    </form>
+
+    <!-- Form for editing name/value pairs. -->
+    <form id="edit-form">
+      <label for="pair-list">Name/Value Pair list</label>
+      <div class="list__btn-wrapper">
+        <textarea id="pair-list" name="pair-list" rows="3" cols="20"></textarea>
+        <div class="button__wrapper">
+          <!-- Buttons for sorting and deleting name/value pairs, and for showing XML data. -->
+          <button type="button" id="btn-sort-name" disabled>
+            Sort by Name
+          </button>
+          <button type="button" id="btn-sort-value" disabled>
+            Sort by Value
+          </button>
+          <button type="button" id="btn-del" disabled>Delete</button>
+          <button type="button" id="btn-show">Show XML</button>
+        </div>
+      </div>
+    </form>
+    <!-- Placeholder element for showing XML data. -->
+    <div class="blob"></div>
+  </body>
+  <!-- Link to the jQuery library and the JavaScript file for the web app. -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./js/app.js" type="module"></script>
+</html>
