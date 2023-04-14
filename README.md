@@ -1,6 +1,6 @@
 Pair List Manager
 
-Link to the working DEMO:
+Link to the working DEMO:https://yehorboichenko.github.io/Pepperi/
 
 Pair List Manager is a simple web app for managing a list of key-value pairs. It allows users to add, delete, and sort pairs by name or value, as well as convert the list to XML format.
 
